@@ -455,7 +455,7 @@
 			let video = document.getElementById('preloadVideo');
 			const preloader = document.getElementById('preloader');
 
-			let videoTimeout = setTimeout(fallbackFunction, 30000);  // 10 seconds
+			let videoTimeout = setTimeout(fallbackFunction, 300000);  // 10 seconds
 
 			video.addEventListener('playing', function () {
 				console.log("Playing...")
