@@ -12793,12 +12793,21 @@ img {
 .events-accordion h3, .events-accordion .h3 {
   font-size: 20px;
 }
+
 .events-accordion .accordion-img {
-  margin-top: -20px;
-  margin-bottom: 20px;
-  max-height: 400px;
-  overflow: hidden;
+  position: relative; /* Set the container to a relative position */
+  height: 400px; /* Set a fixed height for the container */
+  overflow: hidden; /* Hide any content that overflows the container */
 }
+
+.events-accordion .accordion-img img {
+  position: absolute; /* Set the image to an absolute position */
+  bottom: 0; /* Anchor the image to the bottom */
+  width: 100%; /* Set width to 100% to fill its container */
+  height: auto; /* Allow the height to adjust proportionally */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
 @media (min-width: 768px) {
   .events-accordion .accordion-img {
     margin-bottom: 0;
