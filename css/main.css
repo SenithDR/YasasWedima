@@ -12579,6 +12579,7 @@ img {
   font-size: 40px;
   line-height: 43px;
   position: relative;
+  text-shadow: 0px 0px 50px black;
 }
 .banner-text_names::before, .banner-text_names::after {
   content: "";
