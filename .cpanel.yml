@@ -1,9 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATHINDEX=/home/puraqryp/public_html/
+    - export DEPLOYPATH=/home/puraqryp/public_html/
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp -R css $DEPLOYPATHCSS
+    - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R scripts $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp -R scripts $DEPLOYPATH
