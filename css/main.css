@@ -12795,18 +12795,23 @@ img {
 }
 
 .events-accordion .accordion-img {
-  position: relative; /* Set the container to a relative position */
-  height: 400px; /* Set a fixed height for the container */
-  overflow: hidden; /* Hide any content that overflows the container */
+  position: relative;
+  height: 400px; 
+  overflow: visible;
+  /* position: absolute;  */
+  width: 100%; 
+  bottom: 0; 
+  height: auto; 
+  object-fit: cover;
 }
 
-.events-accordion .accordion-img img {
-  position: absolute; /* Set the image to an absolute position */
-  bottom: 0; /* Anchor the image to the bottom */
-  width: 100%; /* Set width to 100% to fill its container */
-  height: auto; /* Allow the height to adjust proportionally */
-  object-fit: cover; /* Maintain aspect ratio while covering the container */
-}
+/* .events-accordion .accordion-img img {
+  position: absolute; 
+  bottom: 0; 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+}  */
 
 @media (min-width: 768px) {
   .events-accordion .accordion-img {
