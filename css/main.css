@@ -12381,6 +12381,11 @@ body.offcanvas {
   padding-bottom: 80px;
 }
 
+@font-face {
+  font-family: 'StayClassySLDT'; /*a name to be used later*/
+  src: url('../fonts/fontawesome-6/webfonts/StayClassySLDT.ttf') format('truetype'); /*URL to font*/
+}
+
 .display-tc h1, .display-tc .h1, .display-tc h2, .display-tc .h2 {
   margin: 0;
   padding: 0;
@@ -12390,7 +12395,9 @@ body.offcanvas {
 .display-tc h1, .display-tc .h1 {
   margin-bottom: 20px;
   line-height: 1.3;
-  font-family: "Amatic SC", cursive;
+  /* font-family: "Stay Classy SLDT", cursive; */
+  font-family: "StayClassySLDT";
+  /* font: "StayClassySLDT"; */
   font-weight: 700;
   font-size: 50px;
   
