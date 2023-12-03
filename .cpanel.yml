@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATHINDEX=/home/puraqryp/public_html/
+    - export DEPLOYPATHCSS=/home/puraqryp/public_html/css
+    - export DEPLOYPATHJS=/home/puraqryp/public_html/js
+    - /repositories/YasasWedima index.html $DEPLOYPATHINDEX
+    - /repositories/YasasWedima/css main.css $DEPLOYPATHCSS
+    - /repositories/YasasWedima/js main.js $DEPLOYPATHJS
+    - /repositories/YasasWedima/ -R images $DEPLOYPATHINDEX
+    - /repositories/YasasWedima/ -R scripts $DEPLOYPATHINDEX
