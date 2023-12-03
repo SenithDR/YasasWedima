@@ -3,7 +3,7 @@
 <html lang="eng">
 
 <head>
-    <title>Puranjana + Yasas</title>
+    <title>Puranjana & Yasas</title>
 
     <meta charset="utf-8">
 
@@ -38,16 +38,19 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
     <div class="loader"></div>
-    <div id="preloader">
-        <video id="preloadVideo" autoplay muted>
-            <source src="scripts/Intro/intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+     <div id="preloader">
+        <video id="preloadVideo" autoplay muted playsinline>
+            <source src="scripts/Intro/intro6.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
         </video>
         <button id="unmuteButton" class="unmute-button">
-            <i class="fas fa-volume-mute"></i> <!-- This is the muted icon by default -->
+             <i class="fas fa-volume-mute"></i> <!-- This is the muted icon by default -->
         </button>
+        <button id="skipButton" class="skip-button">
+            <i class="fas fa-fast-forward"></i> <!-- This is the muted icon by default -->
+       </button>
 
-    </div>
+    </div> 
     <div class="loader"></div>
 
 
@@ -56,7 +59,7 @@
 
         <nav id="navbar" class="navbar navbar-expand-md">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Belle</a>
+                <a class="navbar-brand" href="index.html">Home</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -82,54 +85,11 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#couple-story">Story</a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a class="nav-link" href="#gallery">Gallery</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#invitation">Contact</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Pages
-
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </a>
-
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <a class="dropdown-item" href="about.html">About us</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="rsvp.html">RSVP</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="gallery-single.html">Single Albom</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="blog.html">Blog page</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="single-post.html">Post with aside</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-item" href="single-post-2.html">Post without aside</a>
-                                    </li>
-                                </ul>
+                                <a class="nav-link" href="#invitation">RSVP</a>
                             </li>
                         </ul>
                     </div>
@@ -151,21 +111,21 @@
 
                                 <div class="banner-text d-flex justify-content-center">
                                     <span class="banner-text_city">
-                                        New York
+                                        Colombo
 
                                         <br>
 
-                                        USA
+                                        Sri Lanka
                                     </span>
 
-                                    <span class="banner-text_names">Joseph and Anna</span>
+                                    <span class="banner-text_names">Yasas and Puranjana</span>
 
                                     <span class="banner-text_date">
-                                        November 28th
+                                        January 21st
 
                                         <br>
 
-                                        2023
+                                        2024
                                     </span>
                                 </div>
                             </div>
@@ -238,7 +198,7 @@
 
                             <br>
 
-                            28 . November . 2023
+                            21 . January . 2024
                         </h2>
 
                         <p>
@@ -469,101 +429,6 @@
             </div>
         </section>
 
-        <!-- Section Our-story -->
-
-        <section id="couple-story" class="section couple-story section-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center heading">
-                        <span>We Love Each Other</span>
-
-                        <h2>Our story</h2>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="timeline">
-                            <li class="timeline-item animate-box animation">
-                                <div class="timeline-badge">
-                                    <img src="images/story-1.jpg" alt="">
-                                </div>
-
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First We Meet</h3>
-
-                                        <span class="date">December 25, 2015</span>
-                                    </div>
-
-                                    <div class="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                    </div>
-
-                                    <a href="single-post.html" class="timeline-readmore">Readmore</a>
-                                </div>
-                            </li>
-
-                            <li class="timeline-item animate-box animation">
-                                <div class="timeline-badge">
-                                    <img src="images/story-2.jpg" alt="">
-                                </div>
-
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">First Date</h3>
-
-                                        <span class="date">December 28, 2015</span>
-                                    </div>
-
-                                    <div class="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                    </div>
-
-                                    <a href="single-post.html" class="timeline-readmore">Readmore</a>
-                                </div>
-                            </li>
-
-                            <li class="timeline-item animate-box animation">
-                                <div class="timeline-badge">
-                                    <img src="images/story-3.jpg" alt="">
-                                </div>
-
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h3 class="timeline-title">In A Relationship</h3>
-
-                                        <span class="date">January 1, 2016</span>
-                                    </div>
-
-                                    <div class="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                        </p>
-                                    </div>
-
-                                    <a href="single-post.html" class="timeline-readmore">Readmore</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Section Gallery -->
 
         <section id="gallery" class="section gallery">
@@ -656,10 +521,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-center">
-                        <a href="gallery-single.html" class="btn btn-outline-dark btn-lg">View all</a>
-                    </div>
                 </div>
 
                 <!-- /.row -->
@@ -706,89 +567,6 @@
                                 data-refresh-interval="50">1</span>
 
                             <span class="counter-label">Days together</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Testimonials -->
-
-        <section id="testimonials" class="section testimonials">
-            <div class="container">
-                <div class="row">
-                    <div class="row">
-                        <div class="col-12 text-center heading">
-                            <span>Best Wishes</span>
-
-                            <h2>Friends wishes</h2>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="wrap-testimony">
-                                <div class="owl-carousel-fullwidth">
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="images/friend-1.jpg" alt="user">
-                                            </figure>
-
-                                            <span>Andrew Brewer</span>
-
-                                            <blockquote>
-                                                <p>
-                                                    "With warm congratulations to a very special pair. May you always
-                                                    find in each other the love, laughter and happiness that only
-                                                    partners in life share!"
-                                                </p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="images/friend-2.jpg" alt="user">
-                                            </figure>
-
-                                            <span>Theodore Hamilton</span>
-
-                                            <blockquote>
-                                                <p>
-                                                    "True love stories never end! Happy wedding day and may there be
-                                                    many
-                                                    more chapters in the wonderful story of your love for one another."
-                                                </p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-
-                                    <div class="item">
-                                        <div class="testimony-slide active text-center">
-                                            <figure>
-                                                <img src="images/friend-3.jpg" alt="user">
-                                            </figure>
-
-                                            <span>Maria J. Taylor</span>
-
-                                            <blockquote>
-                                                <p>
-                                                    "A wedding wish for two special person: love is best when shared by
-                                                    two. You know that together you are stronger, together you are one.
-                                                    Have a wonderful married life!"
-                                                </p>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

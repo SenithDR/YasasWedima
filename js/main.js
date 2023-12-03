@@ -200,7 +200,7 @@
 			var timeinterval = setInterval(updateClock, 1000);
 		}
 		// set your wedding date here
-		var deadline = 'November 28 2023 17:30:00 GMT+0300';
+		var deadline = 'January 22 2024 9:00:00 GMT+0530';
 		if (countdown) {
 			initializeClock('timer', deadline);
 		}
@@ -444,7 +444,9 @@
 				}
 			});
 
-
+			$("#skipButton").click(function () {
+				$("#preloader").fadeOut();
+			});
 		});
 
 	}
@@ -455,7 +457,7 @@
 			let video = document.getElementById('preloadVideo');
 			const preloader = document.getElementById('preloader');
 
-			let videoTimeout = setTimeout(fallbackFunction, 300000);  // 10 seconds
+			let videoTimeout = setTimeout(fallbackFunction, 30000);  // 10 seconds
 
 			video.addEventListener('playing', function () {
 				console.log("Playing...")
@@ -468,10 +470,7 @@
 
 			}
 
-
-
 	}
-
 
 
 	$(function () {

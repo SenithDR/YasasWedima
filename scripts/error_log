@@ -1,0 +1,88 @@
+[30-Nov-2023 14:45:22 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 14:56:11 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 14:56:24 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 14:56:35 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 14:57:22 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host '127.0.0.1:3306' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:07:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:07:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:08:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:08:48 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3' (-2) in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:09:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:10:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:13:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:17:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:22:30 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 /home/puraqryp/public_html/scripts/checkName.php(3): require()
+#1 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:22:40 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:22:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:25:21 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 /home/puraqryp/public_html/scripts/checkName.php(3): require()
+#1 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:25:35 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:25:41 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:25:44 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:26:03 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:26:04 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:26:44 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:27:03 America/New_York] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/puraqryp/public_html/scripts/dbconnect.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/dbconnect.php on line 8
+[30-Nov-2023 15:27:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
+[30-Nov-2023 15:28:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_stmt_get_result() in /home/puraqryp/public_html/scripts/checkName.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/puraqryp/public_html/scripts/checkName.php on line 21
