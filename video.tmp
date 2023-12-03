@@ -1,0 +1,12 @@
+  <div id="preloader">
+        <video id="preloadVideo" autoplay muted playsinline>
+            <source src="scripts/Intro/intro6.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <button id="unmuteButton" class="unmute-button">
+             <i class="fas fa-volume-mute"></i> <!-- This is the muted icon by default -->
+        </button>
+        <button id="skipButton" class="skip-button">
+            <i class="fas fa-fast-forward"></i> <!-- This is the muted icon by default -->
+       </button>
+</div> 
