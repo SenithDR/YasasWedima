@@ -12381,12 +12381,11 @@ body.offcanvas {
   padding-bottom: 80px;
 }
 
-.display-tc h1, .display-tc .h1,
-.display-tc h2,
-.display-tc .h2 {
+.display-tc h1, .display-tc .h1, .display-tc h2, .display-tc .h2 {
   margin: 0;
   padding: 0;
   color: white;
+  text-shadow: 0px 0px 50px black;
 }
 .display-tc h1, .display-tc .h1 {
   margin-bottom: 20px;
@@ -12394,6 +12393,7 @@ body.offcanvas {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   font-size: 50px;
+  
 }
 @media (min-width: 768px) {
   .display-tc h1, .display-tc .h1 {
@@ -12572,6 +12572,7 @@ img {
 }
 .banner-text {
   color: #fff;
+  text-shadow: 0px 0px 10px black;
 }
 .banner-text_names {
   font-family: "Great Vibes", cursive;
