@@ -61,7 +61,7 @@
 					alert("Could not submit the response... Please try again :(")
 				} else {
 					// display success message
-					alert("Submit successful! :D")
+					alert("Submit successful!")
 				}
 			}).fail(function (data) {
 				// for debug
