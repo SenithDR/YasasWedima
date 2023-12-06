@@ -2,8 +2,8 @@
 
 $servername = "localhost:3306";
 $username = "root";
-$password = "";
- $dbname = "yasaswedima";
+$password = "SenithMs@123!!";
+$dbname = "yasaswedima";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

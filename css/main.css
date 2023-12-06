@@ -13404,6 +13404,7 @@ img {
   position: relative;
   height: 50px;
 }
+
 .invitation .switch-field .switch {
   position: absolute;
   top: 0;
@@ -13524,6 +13525,13 @@ img {
 .single-post_title {
   margin-bottom: 40px;
   font-family: "Great Vibes", cursive;
+}
+
+.invitation_welcome_message {
+  font-weight: 300;
+  font-size: 24px;
+  text-align:center;
+  /* font-family: "Great Vibes", cursive; */
 }
 
 .post-content blockquote {

@@ -227,8 +227,10 @@
 					} else {
 						console.log(data.firstNme)
 						// 1. Update welcome message
-						const welcomeMessage = `Dear ${data.firstNme} ${data.lastNme}, you are cordially invited to our wedding.`;
-						document.querySelector('.invitation_welcome_message').textContent = welcomeMessage;
+						const welcomeMessage = `<strong>${data.firstNme} ${data.lastNme}</strong>, join us for the joyous celebration of our wedding!`;
+						// document.querySelector('.invitation_welcome_message').textContent = welcomeMessage;
+						const welcomeContainer = document.querySelector('.invitation_welcome_message');
+						welcomeContainer.innerHTML = welcomeMessage;
 
 						// 2. Update the max attribute for attendanceID
 						if (data.seats) {
@@ -453,34 +455,34 @@
 
 	function introCaseda() {
 		console.log("Intro Check...")
-			console.log("Loaded...")
-			let video = document.getElementById('preloadVideo');
-			const preloader = document.getElementById('preloader');
+		console.log("Loaded...")
+		let video = document.getElementById('preloadVideo');
+		const preloader = document.getElementById('preloader');
 
-			let videoTimeout = setTimeout(fallbackFunction, 60000);  // 10 seconds
+		let videoTimeout = setTimeout(fallbackFunction, 60000);  // 10 seconds
 
-			video.addEventListener('playing', function () {
-				console.log("Playing...")
-				clearTimeout(videoTimeout);  // Clear the timeout if video starts playing
-			});
+		video.addEventListener('playing', function () {
+			console.log("Playing...")
+			clearTimeout(videoTimeout);  // Clear the timeout if video starts playing
+		});
 
-			function fallbackFunction() {
-				// Here you can hide the video and display some fallback content or redirect the user, etc.
-				$("#preloader").fadeOut();
+		function fallbackFunction() {
+			// Here you can hide the video and display some fallback content or redirect the user, etc.
+			$("#preloader").fadeOut();
 
-			}
+		}
 
 	}
 
 	function videoEnded() {
-            // Hide the preloader and show the main content
-            document.getElementById('preloader').style.display = 'none';
-            document.querySelector('.main').style.display = 'block';
+		// Hide the preloader and show the main content
+		document.getElementById('preloader').style.display = 'none';
+		document.querySelector('.main').style.display = 'block';
 
-            // Run your animation or any other code here
-            // For example, you might want to add a class to trigger the animation:
-            document.querySelector('.animation').classList.add('animation');
-        }
+		// Run your animation or any other code here
+		// For example, you might want to add a class to trigger the animation:
+		document.querySelector('.animation').classList.add('animation');
+	}
 
 
 	$(function () {
