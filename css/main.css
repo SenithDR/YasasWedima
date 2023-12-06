@@ -13665,7 +13665,7 @@ img {
     bottom: 20px;
     right: 20px;
     padding: 10px 15px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 100;
     background-color: rgba(255,255,255,0.8);  /* Semi-transparent background for better visibility */
     border: none;
@@ -13677,7 +13677,7 @@ img {
   bottom: 20px;
   right: 90px;
   padding: 10px 15px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   z-index: 100;
   background-color: rgba(255,255,255,0.8);  /* Semi-transparent background for better visibility */
   border: none;
