@@ -479,7 +479,7 @@
 
             // Run your animation or any other code here
             // For example, you might want to add a class to trigger the animation:
-            //document.querySelector('.animation').classList.add('your-animation-class');
+            document.querySelector('.animation').classList.add('animation');
         }
 
 
