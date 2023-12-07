@@ -227,7 +227,7 @@
 					} else {
 						console.log(data.firstNme)
 						// 1. Update welcome message
-						const welcomeMessage = `<strong>${data.firstNme} ${data.lastNme}</strong><br> Join us for the joyous celebration of our wedding!`;
+						const welcomeMessage = `Dear, <strong>${data.firstNme} ${data.lastNme}</strong><br> you are codially invited to our wedding!`;
 						// document.querySelector('.invitation_welcome_message').textContent = welcomeMessage;
 						const welcomeContainer = document.querySelector('.invitation_welcome_message');
 						welcomeContainer.innerHTML = welcomeMessage;
