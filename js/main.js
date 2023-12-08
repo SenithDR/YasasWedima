@@ -223,7 +223,7 @@
 				success: function (data) {
 					console.log(data);
 					if (data == null) {
-						alert("Please check the number and try again!")
+						alert("The number you entered is not in our system. Please try another number or contact Yasas/Puranjana for verification.")
 					} else {
 						console.log(data.firstNme)
 						// 1. Update welcome message
