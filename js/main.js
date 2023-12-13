@@ -281,9 +281,12 @@
 			if (selectedValue === "Yes") {
 				var divElement = document.querySelector(".hiddenItem2");
 				divElement.style.display = "block";
+				document.getElementById('attendanceID').disabled = false;
 			} else if (selectedValue === "No") {
 				var divElement = document.querySelector(".hiddenItem2");
 				divElement.style.display = "none";
+				document.getElementById('attendanceID').disabled = true;
+
 			}
 		});
 	}

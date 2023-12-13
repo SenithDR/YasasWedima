@@ -11,7 +11,7 @@ if ($attending == "No") {
 	$guestCount = 0;
 
 }
-$submitQ = "UPDATE rsvp_list SET s_confirmed = ?, guestDetails = ?, attending = ? WHERE contact = ?;";
+$submitQ = "UPDATE `rsvp_list` SET `s_confirmed` = ?, `guestDetails` = ?, `attending` = ? WHERE `contact` = ?";
 $submitRes = mysqli_prepare($conn, $submitQ);
 
 if ($submitRes) {
