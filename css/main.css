@@ -595,7 +595,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -6333,8 +6333,10 @@ textarea.form-control-lg {
   height: var(--bs-tooltip-arrow-width);
 }
 .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
-  left: -1px;
-  border-width: calc(var(--bs-tooltip-arrow-width) * 0.5) 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+  left: 0px;
+}
+.bs-tooltip-start .tooltip-arrow::after, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::after {
+  left: var(--bs-tooltip-border-width);
   border-left-color: var(--bs-tooltip-bg);
 }
 
@@ -13455,38 +13457,75 @@ img {
 .invitation .switch-field input[type=radio] {
   display: none;
 }
-.invitation .switch-field label[for=yes] {
+.invitation .switch-field label[for=church-yes] {
   left: 0px;
 }
-.invitation .switch-field label[for=no] {
+.invitation .switch-field label[for=church-no] {
   right: 0px;
 }
-.invitation .switch-field #yes:checked ~ .switch label[for=yes] {
+.invitation .switch-field #church-yes:checked ~ .switch label[for=church-yes] {
   border-color: #198754;
   color: #198754;
 }
-.invitation .switch-field #yes:checked ~ .switch span {
+.invitation .switch-field #church-yes:checked ~ .switch span {
   background: #198754;
   margin: -2px 0px 0px -4px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.invitation .switch-field #yes:checked ~ .switch span::after {
+.invitation .switch-field #church-yes:checked ~ .switch span::after {
   background: #198754;
   margin-top: -8px;
   width: 4px;
   height: 12px;
 }
-.invitation .switch-field #no:checked ~ .switch label[for=no] {
+.invitation .switch-field #church-no:checked ~ .switch label[for=church-no] {
   border-color: #dc3545;
   color: #dc3545;
 }
-.invitation .switch-field #no:checked ~ .switch span {
+.invitation .switch-field #church-no:checked ~ .switch span {
   background: #dc3545;
   margin-left: -8px;
 }
-.invitation .switch-field #no:checked ~ .switch span::after {
+.invitation .switch-field #church-no:checked ~ .switch span::after {
+  background: #dc3545;
+  height: 20px;
+  margin-top: -8px;
+  margin-left: 8px;
+}
+.invitation .switch-field label[for=wedding-yes] {
+  left: 0px;
+}
+.invitation .switch-field label[for=wedding-no] {
+  right: 0px;
+}
+.invitation .switch-field #wedding-yes:checked ~ .switch label[for=wedding-yes] {
+  border-color: #198754;
+  color: #198754;
+}
+.invitation .switch-field #wedding-yes:checked ~ .switch span {
+  background: #198754;
+  margin: -2px 0px 0px -4px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.invitation .switch-field #wedding-yes:checked ~ .switch span::after {
+  background: #198754;
+  margin-top: -8px;
+  width: 4px;
+  height: 12px;
+}
+.invitation .switch-field #wedding-no:checked ~ .switch label[for=wedding-no] {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+.invitation .switch-field #wedding-no:checked ~ .switch span {
+  background: #dc3545;
+  margin-left: -8px;
+}
+.invitation .switch-field #wedding-no:checked ~ .switch span::after {
   background: #dc3545;
   height: 20px;
   margin-top: -8px;

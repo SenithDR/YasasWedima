@@ -7,7 +7,7 @@ $cntNo = htmlspecialchars($_POST["contact"]);
 // $cntNo = '0712188098';
 
 // Create a prepared statement
-$invInfo = "SELECT * FROM `rsvp_list` WHERE `contact` = ?";
+$invInfo = "SELECT firstNme, lastNme, church, wedding FROM `rsvp_list` WHERE `contact` = ?";
 $stmt = mysqli_prepare($conn, $invInfo);
 
 if ($stmt) {

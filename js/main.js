@@ -34,8 +34,8 @@
 		});
 		$form.submit(function (e) {
 			// remove the error class
-			if (!$('input[name="rdo"]:checked').length) {
-				alert('Please select Yes or No before submitting!');
+			if (!$('input[name="church-attendance"]:checked').length || !$('input[name="wedding-attendance"]:checked').length) {
+				alert('Please select Yes or No for both church ceremony and wedding before submitting!');
 				e.preventDefault();  // prevent form submission
 			}
 			$('.form-group').removeClass('has-error');
@@ -44,9 +44,8 @@
 			// get the form data
 			var formData = {
 				'contact': $('input[name="form-telephone"]').val(),
-				'attending': $('input[name="rdo"]:checked').val(),
-				'guestCount': $('#attendanceID').val(),
-				'guestDetails': getGuestDetails()
+				'church': $('input[name="church-attendance"]:checked').val(),
+				'wedding': $('input[name="wedding-attendance"]:checked').val()
 			};
 			// process the form
 			$.ajax({
@@ -57,11 +56,11 @@
 				encode: true
 			}).done(function (data) {
 				// handle errors
-				if (!data.state) {
-					alert("Could not submit the response... Please try again :(")
+				if (!data.success) {
+					alert(data.message || "Could not submit the response... Please try again :(")
 				} else {
 					// display success message
-					alert("Submit successful! :D")
+					alert(data.message || "Submit successful! :D")
 				}
 			}).fail(function (data) {
 				// for debug
@@ -200,7 +199,7 @@
 			var timeinterval = setInterval(updateClock, 1000);
 		}
 		// set your wedding date here
-		var deadline = 'January 22 2024 9:00:00 GMT+0530';
+		var deadline = 'May 17 2025 16:00:00 GMT+0530';
 		if (countdown) {
 			initializeClock('timer', deadline);
 		}
@@ -208,7 +207,6 @@
 
 	function loadData() {
 		var cntBtn = $('.cnt-button');
-
 
 		cntBtn.on('click', function () {
 			var cntNo = jQuery('input[name=form-telephone]').val()
@@ -228,38 +226,26 @@
 						console.log(data.firstNme)
 						// 1. Update welcome message
 						const welcomeMessage = `Dear, <strong>${data.firstNme} ${data.lastNme}</strong><br> you are cordially invited to our wedding!`;
-						// document.querySelector('.invitation_welcome_message').textContent = welcomeMessage;
 						const welcomeContainer = document.querySelector('.invitation_welcome_message');
 						welcomeContainer.innerHTML = welcomeMessage;
 
-						// 2. Update the max attribute for attendanceID
-						if (data.seats) {
-							let attendanceInput = document.getElementById('attendanceID');
-							attendanceInput.setAttribute('max', data.seats);
-
-							// Set the default value
-							attendanceInput.value = data.seats;
+						// 2. Pre-select radio buttons if attendance is already set
+						if (data.church && data.church !== 'N/A') {
+							$(`input[name="church-attendance"][value="${data.church}"]`).prop('checked', true);
+						}
+						if (data.wedding && data.wedding !== 'N/A') {
+							$(`input[name="wedding-attendance"][value="${data.wedding}"]`).prop('checked', true);
 						}
 
 						// Display the hidden content
-						generateGuestTable();
 						var divElement = document.querySelector(".hiddenItem");
 						divElement.style.display = "block";
-						var divElement = document.querySelector(".hiddenItem");
-						divElement.style.display = "block";
-
 					}
 				},
 				error: function (err) {
 					console.log(err);
 				}
 			});
-			// var divElement = document.querySelector(".hiddenItem");
-			// if (divElement.style.display === "none" || divElement.style.display === "") {
-			// 	divElement.style.display = "block";
-			// } else {
-			// 	divElement.style.display = "none";
-			// }
 		});
 	}
 
@@ -269,48 +255,6 @@
 			$('input[name="rdo"]').prop('checked', false);
 			var divElement = document.querySelector(".hiddenItem");
 			divElement.style.display = "none";
-		});
-	}
-
-	function attendanceHide() {
-		$('input[name="rdo"]').change(function () {
-			// Get the selected value
-			var selectedValue = $(this).val();
-
-			// Add any logic you want here based on the selected value
-			if (selectedValue === "Yes") {
-				var divElement = document.querySelector(".hiddenItem2");
-				divElement.style.display = "block";
-				document.getElementById('attendanceID').disabled = false;
-			} else if (selectedValue === "No") {
-				var divElement = document.querySelector(".hiddenItem2");
-				divElement.style.display = "none";
-				document.getElementById('attendanceID').disabled = true;
-
-			}
-		});
-	}
-
-	function addGuest() {
-		var addBtn = $('.add-button');
-		var guestInput = $('#form-guest-name');
-		var guestList = $('.guest-list');
-
-		addBtn.on('click', function () {
-			event.preventDefault();
-			var guestVal = guestInput.val();
-			var appendString = '<div><input class="form-control" type="text" value="' + guestVal + '"/><a href="#" class="remove_field"><i class="fa fa-trash"></i></a></div>';
-			if (guestVal == '') {
-				guestInput.focus();
-			} else {
-				guestList.append(appendString);
-				guestInput.val('');
-			}
-		});
-
-		$('.guest-list').on('click', '.remove_field', function (e) {
-			e.preventDefault();
-			$(this).parent('div').remove();
 		});
 	}
 
@@ -367,65 +311,7 @@
 		});
 	}
 
-	function generateGuestTable() {
-		const guestCount = parseInt(document.getElementById('attendanceID').value);
-		const tableBody = document.querySelector('.guest-preferences-table tbody');
-
-		// Clear any existing rows first
-		tableBody.innerHTML = '';
-
-		for (let i = 1; i <= guestCount; i++) {
-			let row = document.createElement('tr');
-
-			let guestNoCell = document.createElement('td');
-			guestNoCell.textContent = i;
-			row.appendChild(guestNoCell);
-
-			let alcoholCell = document.createElement('td');
-			let alcoholSelect = document.createElement('select');
-			alcoholSelect.innerHTML = `
-				<option value="no" selected>No</option>
-				<option value="yes">Yes</option>
-			`;
-			alcoholCell.appendChild(alcoholSelect);
-			row.appendChild(alcoholCell);
-
-			let mealCell = document.createElement('td');
-			let mealSelect = document.createElement('select');
-			mealSelect.innerHTML = `
-				<option value="non-veg" selected>Non-Veg</option>
-				<option value="veg">Veg</option>
-			`;
-			mealCell.appendChild(mealSelect);
-			row.appendChild(mealCell);
-
-			tableBody.appendChild(row);
-		}
-	}
-
-	function attendanceChange() {
-		document.getElementById('attendanceID').addEventListener('change', generateGuestTable);
-	}
-
 	// Watch changes on the attendanceID input
-	function getGuestDetails() {
-		const guestCount = parseInt(document.getElementById('attendanceID').value);
-		let guests = [];
-
-		for (let i = 1; i <= guestCount; i++) {
-			let row = document.querySelector(`.guest-preferences-table tbody tr:nth-child(${i})`);
-			let alcohol = row.querySelector('td:nth-child(2) select').value;
-			let meal = row.querySelector('td:nth-child(3) select').value;
-
-			guests.push({
-				'guestNo': i,
-				'alcohol': alcohol,
-				'meal': meal
-			});
-		}
-
-		return JSON.stringify(guests);
-	}
 
 	function introVid() {
 		$(document).ready(function () {
@@ -456,27 +342,6 @@
 
 	}
 
-	function introCaseda() {
-		console.log("Intro Check...")
-		console.log("Loaded...")
-		let video = document.getElementById('preloadVideo');
-		const preloader = document.getElementById('preloader');
-
-		let videoTimeout = setTimeout(fallbackFunction, 60000);  // 10 seconds
-
-		video.addEventListener('playing', function () {
-			console.log("Playing...")
-			clearTimeout(videoTimeout);  // Clear the timeout if video starts playing
-		});
-
-		function fallbackFunction() {
-			// Here you can hide the video and display some fallback content or redirect the user, etc.
-			$("#preloader").fadeOut();
-
-		}
-
-	}
-
 	function videoEnded() {
 		// Hide the preloader and show the main content
 		document.getElementById('preloader').style.display = 'none';
@@ -487,20 +352,16 @@
 		document.querySelector('.animation').classList.add('animation');
 	}
 
-
 	$(function () {
 		contentWayPoint();
 		testimonialCarousel();
 		counter();
 		counterWayPoint();
 		countdown();
-		addGuest();
 		loadData();
 		isotope();
 		contactForm();
 		clearOnChange();
-		attendanceChange();
-		attendanceHide();
-		introVid();
+		// attendanceHide();
 	});
 }());
